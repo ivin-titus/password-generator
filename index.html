@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="./files/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="options">
+            <div class="length-control">
+                <label for="length">Password Length: <span id="length-value">8</span></label>
+                <input type="range" id="length" min="8" max="52" value="8">
+            </div>
+            <div class="checkboxes">
+                <label>
+                    <input class="up" type="checkbox" id="uppercase">
+                    <span>Uppercase</span>
+                </label>
+                <label>
+                    <input class="low" type="checkbox" id="lowercase" checked>
+                    <span>Lowercase</span>
+                </label>
+                <label>
+                    <input class="num" type="checkbox" id="numbers">
+                    <span>Numbers</span>
+                </label>
+                <label>
+                    <input class="sym" type="checkbox" id="symbols">
+                    <span>Symbols</span>
+                </label>
+            </div>
+            <button class="gen-pass" onclick="generatePassword()">Generate Password</button>
+            <p id="warning" class="warning"></p>
+        </div>
+        <div class="generated-password-box">
+            <p>Generated Password</p>
+            <div id="generated-password"></div>
+        </div>
+        
+        <div class="password">
+            <input type="text" id="password" readonly hidden>
+            <button id="copyButton" onclick="copyPassword()">Copy</button>
+        </div>
+    </div>
+    <footer class = "footer" id = "footer">
+        <div class="footer-content">
+            <p class="copyright">&copy; 2024 Ivin Techz</p>
+            <div class="follow-icons">
+                <a href="https://github.com/ivin-titus" class="git">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.instagram.com/ivin_titus/" class="insta">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="mailto:ivintitus@hotmail.com" class="mail">
+                    <i class='bx bxl-gmail'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ivin-titus-49b403297" class="linkedin">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://twitter.com/ivin_titus_" class="twitter">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+                <a href="https://www.youtube.com/@Ivin_Techz" class="youtube">
+                    <i class='bx bxl-youtube'></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script> 
+        document.addEventListener("DOMContentLoaded", function () {
+        const body = document.body;
+        const bgImageUrl = "./files/1111.jpg";
+        const bgImage = new Image();
+        bgImage.src = bgImageUrl;
+        bgImage.onload = function () {
+            body.style.backgroundImage = `url('${bgImageUrl}')`;
+            body.classList.add("bg-loaded");
+        };
+    });
+    </script>
+    <script src="./files/script.js"></script>
+
+</body>
+</html>

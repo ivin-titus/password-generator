@@ -26,7 +26,7 @@ The **Password Generator** is a user-friendly web application designed to create
 Here’s a preview of the Password Generator:  
 
 ![Password Generator Preview](./files/demo.png)  
-**©️ 2024 Ivin Titus**
+**&copy; 2024 Ivin Titus**
 
 <br>
 
